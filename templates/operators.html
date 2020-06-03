@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>operators</h1>
+    {%for each in operators%}
+    <p>{{each.name}}</p>
+    <p>{{each.description}}</p>
+    <p>{{each.symbol}}</p>
+    <p>{{each.example}}</p>
+    <p>{{each.uses}}</p>
+    {% endfor %}
+
+    <form method="POST" action='/operators'>
+        <h2> Add an Op</h2>
+        <div>
+            Name:
+            <input type="text" name="name">
+        </div>
+        <div>
+            Description:
+            <input type="text" name="description">
+        </div>
+        <div>
+            Symbol:
+            <input type="text" name="symbol">
+        </div>
+        <div>
+            Example:
+            <input type="text" name="example">
+        </div>
+        <div>
+            Uses:
+            <input type="text" name="uses">
+        </div>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
